@@ -1,0 +1,50 @@
+.shop-banners {
+  padding-top: 45px;
+  &__container {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.shop-banner {
+  position: relative;
+  @include flex-all-center;
+  flex-direction: column;
+  width: 50%;
+  min-height: 420px;
+  padding: 50px;
+  color: var(--color-white);
+  @include bg-cover;
+  background-color: var(--color-dark);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(#d70808, 0.1);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 48px;
+  }
+
+  &__text {
+    z-index: 1;
+  }
+
+  &--men {
+    background-image: url('../img/banner-1.jpg');
+  }
+
+  &--women {
+    background-image: url('../img/banner-2.jpg');
+  }
+}
