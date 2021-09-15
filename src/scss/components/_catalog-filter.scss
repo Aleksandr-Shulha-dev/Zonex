@@ -1,0 +1,76 @@
+.catalog-filters {
+  width: 309px;
+  padding-top: 27px;
+  padding-right: 66px;
+}
+
+.catalog-content {
+  min-height: 500px;
+}
+
+.hide-filters {
+  padding-left: 24px;
+  margin-bottom: 18px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-image: url("../img/cross.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.catalog-filter {
+  border-top: 1px solid #eee;
+
+  &__top {
+    @include flex-all-sb;
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+
+  &__caption {
+    @include flex-v-center;
+  }
+
+  &__title {
+    margin: 0;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase; 
+  }
+
+  &__quantity {
+    margin-left: 5px;
+    min-width: 16px;
+    transform: translateY(-1px);
+  }
+
+  &__toggle {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    color: #aaa;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: currentColor;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: currentColor;
+      transform: translateY(-50%);
+    }
+  }
+}
